@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bugatti EB110 #Alex.Ka Special Edition
+* source:	https://sketchfab.com/3d-models/bugatti-eb110-alexka-special-edition-46e258f3d3b54b3998acc2df1a1ac3de
+* author:	WARENTERTAINMENT™ (https://sketchfab.com/WarEntertainment)
+
+Model License:
+* license type:	CC-BY-ND-4.0 (http://creativecommons.org/licenses/by-nd/4.0/)
+* requirements:	Author must be credited. Modified versions can not be distributed. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bugatti EB110 #Alex.Ka Special Edition" (https://sketchfab.com/3d-models/bugatti-eb110-alexka-special-edition-46e258f3d3b54b3998acc2df1a1ac3de) by WARENTERTAINMENT™ (https://sketchfab.com/WarEntertainment) licensed under CC-BY-ND-4.0 (http://creativecommons.org/licenses/by-nd/4.0/)

@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+}
+
+.carName {
+  position: absolute;
+  top: 0;
+  left: 85%;
+  color: white;
+}
+
+#bodybar,
+#rimbar {
+  position: absolute;
+  top: 30%;
+  right: 90%;
+  bottom: 90%;
+  transform: translate(-50%, 50%);
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 58px;
+}
+
+#render-window {
+  width: 100%;
+  height: 100%;
+}
+
+.color-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0;
+  padding-top: 20px;
+  margin-top: 20px;
+
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-button.selected {
+  outline: 3px solid rgb(211, 201, 201);
+}
+
+.btn-grad,
+.btn-grad2,
+.btn {
+  background-size: cover;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.btn-grad:hover,
+.btn-grad2:hover,
+.btn:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+.btn-grad {
+  background-image: url("assets/car.png");
+}
+
+.btn-grad2 {
+  background-image: url("assets/rim.png");
+}
+
+.btn {
+  background-image: url("assets/annotation.png");
+}
+
+.audio-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-pause-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.play-pause-button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hotspot {
+  background-image: linear-gradient(
+    to right,
+    #000000 0%,
+    #2c2c2c 51%,
+    #000000 100%
+  );
+  color: white;
+  padding: 10px;
+  width: 150px;
+  position: absolute;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition-duration: 0.2s;
+  border-radius: 10px;
+  transition-property: opacity, transform;
+}
+
+.hotspot::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 20px;
+  top: 90%;
+  left: 50%;
+  transform: rotateZ(45deg) translateX(-50%);
+  z-index: -1;
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+#button-3 .checkbox:active + .knobs:before {
+  width: 46px;
+  border-radius: 100px;
+}
+
+#button-3 .checkbox:checked:active + .knobs:before {
+  margin-left: -26px;
+}
+
+#button-3 .checkbox:checked + .knobs:before {
+  content: "On";
+  left: 42px;
+  background-color: #0f0e0e;
+}
+
+#button-3 .checkbox:checked ~ .layer {
+  background-color: #fcebeb;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 96%;
+  transform: translate(-50%, -50%);
+}
+
+/* load manager */
+.spinner-box {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(1, 1, 1, 0.9);
+}
+
+.configure-border-1 {
+  width: 115px;
+  height: 115px;
+  padding: 3px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fb5b53;
+  animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+}
+
+.configure-border-2 {
+  width: 115px;
+  height: 115px;
+  padding: 3px;
+  left: -115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(63, 249, 220);
+  transform: rotate(45deg);
+  animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+}
+
+.configure-core {
+  width: 100%;
+  height: 100%;
+  background-color: #1d2630;
+}
+
+@keyframes configure-clockwise {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes configure-xclockwise {
+  0% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-135deg);
+  }
+  75% {
+    transform: rotate(-225deg);
+  }
+  100% {
+    transform: rotate(-315deg);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
